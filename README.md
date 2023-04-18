@@ -24,3 +24,9 @@ Game class:
     Check which player should go
     Check if someone won
     
+
+
+In a round we need to:
+    Tell player what legal actions are
+    Make player take an action
+    Perform the action (Check if special card)

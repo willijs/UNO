@@ -1,13 +1,17 @@
-
+from CardDeck import CardDeck as Deck
 
 class Game():
 
 
     def __init__(self):
         self.players = []
-        self.cardDeck = new carddeck
+        self.cardDeck = Deck()
 
-
+    def player_draw_dard(self, player_id):
+        card = self.cardDeck.drawTopCard()
+        player = self.players[player_id]
+        player.drawcard(card)
+    
     def get_legal_actions(self, players, player_id):
         
         wild_flag = 0
@@ -50,3 +54,5 @@ class Game():
         if not legal_actions:
             legal_actions = ['draw']
         return legal_actions
+    
+    

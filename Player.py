@@ -11,8 +11,11 @@ class Player():
         return self.player_id
     
 
-    # def draw_card(self):
-    #     self.hand.append(cardDeck.drawCard())
+    def draw_card(self, card):
+        self.hand.append(card)
+        
+    def get_hand(self):
+        return self.hand
 
     # def play_card(self, cardIndex):
     #     self.hand.pop(cardIndex)
