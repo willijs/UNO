@@ -1,3 +1,5 @@
+from CardDeck import CardDeck as Deck
+from Card import Card 
 
 
 class Game():
@@ -5,7 +7,7 @@ class Game():
 
     def __init__(self):
         self.players = []
-        self.cardDeck = new carddeck
+        self.cardDeck = Deck
 
 
     def get_legal_actions(self, players, player_id):
@@ -16,7 +18,7 @@ class Game():
         wild_4_actions = []
         hand = players[player_id].hand
         target = self.target
-        
+
         if target.type == 'wild':
             for card in hand:
                 if card.type == 'wild':
@@ -45,8 +47,11 @@ class Game():
                             legal_actions.extend(WILD)
                 elif card.color == target.color or card.trait == target.trait:
                     legal_actions.append(card.str)
+
         if not legal_actions:
             legal_actions = wild_4_actions
+
         if not legal_actions:
             legal_actions = ['draw']
+
         return legal_actions
