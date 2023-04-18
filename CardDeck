@@ -1,0 +1,30 @@
+import Card
+
+
+class CardDeck:
+    
+    def __init__(self):
+        
+        self.deck = []
+        
+        self.build()
+        
+    def build(self):
+        
+        for color in Card.info[color]:
+            
+            for num in Card.info["trait"][:10]:
+                self.deck.append(Card(color, num))
+                if num != "0":
+                    self.deck.append(Card(color, num))
+                    
+            for wild in Card.info["trait"][-2:]:
+                self.deck.append(Card(color,wild))
+                
+    def drawTopCard(self):
+        
+        return self.deck.pop()
+    
+    def shuffle(self):
+        
+        
