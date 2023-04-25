@@ -5,6 +5,9 @@ import re
 
 class Game():
 
+    actions = {0: "r-0", 1: "r-1", 2: "r-2", 3: "r-3", 4: "r-4", 5: "r-5", 6: "r-6", 7: "r-7", 8: "r-8", 9: "r-9", 10: "r-skip", 11: "r-reverse", 12: "r-draw_2", 13: "r-wild", 14: "r-wild_draw_4", 15: "g-0", 16: "g-1", 17: "g-2", 18: "g-3", 19: "g-4", 20: "g-5", 21: "g-6", 22: "g-7", 23: "g-8", 24: "g-9", 25: "g-skip", 26: "g-reverse", 27: "g-draw_2", 28: "g-wild", 29: "g-wild_draw_4", 30: "b-0", 31: "b-1", 32: "b-2", 33: "b-3", 34: "b-4", 35: "b-5", 36: "b-6", 37: "b-7", 38: "b-8", 39: "b-9", 40: "b-skip", 41: "b-reverse", 42: "b-draw_2", 43: "b-wild", 44: "b-wild_draw_4", 45: "y-0", 46: "y-1", 47: "y-2", 48: "y-3", 49: "y-4", 50: "y-5", 51: "y-6", 52: "y-7", 53: "y-8", 54: "y-9", 55: "y-skip", 56: "y-reverse", 57: "y-draw_2", 58: "y-wild", 59: "y-wild_draw_4", 60: "draw", 61: "pass"}
+
+
 
     def __init__(self, num_players):
         self.players = []
